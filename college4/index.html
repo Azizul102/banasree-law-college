@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>বনশ্রী ল' কলেজ | Banasree Law College</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Serif+Bengali:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a1628;
+    --deep-blue: #0d2247;
+    --royal: #1a3a6e;
+    --crimson: #c0202a;
+    --gold: #c9933a;
+    --gold-light: #e8b96a;
+    --cream: #f5f0e8;
+    --parchment: #ede4d3;
+    --white: #ffffff;
+    --text-dark: #1a1208;
+    --text-mid: #3d3020;
+    --border-gold: rgba(201,147,58,0.35);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Serif Bengali', 'Libre Baskerville', serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  /* ── TOPBAR ── */
+  .topbar {
+    background: var(--navy);
+    color: rgba(255,255,255,0.75);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--border-gold);
+  }
+  .topbar .inner {
+    max-width: 1200px; margin: auto; padding: 0 24px;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px;
+  }
+  .topbar a { color: var(--gold-light); text-decoration: none; margin-left: 16px; }
+  .topbar a:hover { color: #fff; }
+
+  /* ── NAV ── */
+  nav {
+    background: var(--deep-blue);
+    position: sticky; top: 0; z-index: 999;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.45);
+    border-bottom: 3px solid var(--gold);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: auto; padding: 0 24px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 14px; padding: 12px 0;
+    text-decoration: none;
+  }
+  .nav-logo .crest {
+    width: 52px; height: 52px; border-radius: 50%;
+    background: var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem; font-weight: 900; color: var(--navy);
+    font-family: 'Playfair Display', serif;
+    box-shadow: 0 0 0 3px rgba(201,147,58,0.3);
+  }
+  .nav-logo .name-block .en {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem; font-weight: 700;
+    color: var(--white); letter-spacing: 0.03em; line-height: 1;
+  }
+  .nav-logo .name-block .bn {
+    font-family: 'Noto Serif Bengali', serif;
+    font-size: 0.75rem; color: var(--gold-light); margin-top: 2px;
+  }
+  .nav-links { display: flex; gap: 4px; align-items: center; }
+  .nav-links a {
+    color: rgba(255,255,255,0.82);
+    text-decoration: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.92rem; letter-spacing: 0.06em;
+    padding: 8px 14px; border-radius: 2px;
+    transition: all 0.2s;
+    text-transform: uppercase;
+  }
+  .nav-links a:hover { color: var(--gold-light); background: rgba(201,147,58,0.1); }
+  .nav-links .btn-apply {
+    background: var(--crimson); color: #fff;
+    padding: 8px 18px; border-radius: 3px;
+    font-weight: 700; letter-spacing: 0.08em;
+    box-shadow: 0 2px 12px rgba(192,32,42,0.4);
+  }
+  .nav-links .btn-apply:hover { background: #a51920; color: #fff; }
+  .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 8px; }
+  .hamburger span { display: block; width: 26px; height: 2px; background: #fff; border-radius: 2px; transition: 0.3s; }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--deep-blue) 50%, #0e1f42 100%);
+    min-height: 88vh;
+    position: relative; overflow: hidden;
+    display: flex; align-items: center;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(ellipse 60% 50% at 70% 50%, rgba(201,147,58,0.07) 0%, transparent 70%),
+      repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(201,147,58,0.04) 80px),
+      repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(201,147,58,0.04) 80px);
+  }
+  .hero-scales {
+    position: absolute; right: -40px; top: 50%; transform: translateY(-50%);
+    font-size: 28rem; color: rgba(201,147,58,0.04);
+    font-family: serif; line-height: 1; user-select: none; pointer-events: none;
+  }
+  .hero-content {
+    max-width: 1200px; margin: auto; padding: 80px 24px;
+    position: relative; z-index: 2;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+  }
+  .hero-left { }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(201,147,58,0.15); border: 1px solid var(--border-gold);
+    border-radius: 2px; padding: 6px 14px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--gold-light); margin-bottom: 24px;
+  }
+  .hero-badge::before { content: '⚖'; font-size: 1rem; }
+  .hero h1 {
+    font-family: 'Noto Serif Bengali', serif;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-weight: 800; color: #fff;
+    line-height: 1.25; margin-bottom: 8px;
+  }
+  .hero h1 .gold { color: var(--gold-light); }
+  .hero .subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; color: rgba(255,255,255,0.55);
+    letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 20px;
+  }
+  .hero p {
+    font-family: 'Noto Serif Bengali', serif;
+    color: rgba(255,255,255,0.72); font-size: 1rem; line-height: 1.75;
+    margin-bottom: 36px; max-width: 480px;
+  }
+  .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--crimson); color: #fff;
+    padding: 14px 28px; border-radius: 3px;
+    font-family: 'Noto Serif Bengali', serif;
+    font-size: 0.95rem; font-weight: 700;
+    text-decoration: none; display: inline-block;
+    box-shadow: 0 4px 20px rgba(192,32,42,0.5);
+    transition: all 0.25s; border: none; cursor: pointer;
+    letter-spacing: 0.02em;
+  }
+  .btn-primary:hover { background: #a51920; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(192,32,42,0.55); }
+  .btn-outline {
+    border: 1px solid rgba(201,147,58,0.5); color: var(--gold-light);
+    padding: 14px 28px; border-radius: 3px;
+    font-family: 'Noto Serif Bengali', serif;
+    font-size: 0.95rem;
+    text-decoration: none; display: inline-block;
+    transition: all 0.25s;
+  }
+  .btn-outline:hover { background: rgba(201,147,58,0.12); border-color: var(--gold); }
+  .hero-right {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  }
+  .stat-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(201,147,58,0.2);
+    border-radius: 6px; padding: 24px 20px;
+    text-align: center; backdrop-filter: blur(4px);
+    transition: all 0.3s;
+  }
+  .stat-card:hover { background: rgba(201,147,58,0.08); border-color: rgba(201,147,58,0.45); transform: translateY(-3px); }
+  .stat-card .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem; font-weight: 700; color: var(--gold-light);
+    line-height: 1;
+  }
+  .stat-card .label {
+    font-family: 'Noto Serif Bengali', serif;
+    font-size: 0.82rem; color: rgba(255,255,255,0.6);
+    margin-top: 6px; line-height: 1.4;
+  }
+  .stat-card.wide { grid-column: span 2; }
+
+  /* ── NOTICE BAND ── */
+  .notice-band {
+    background: var(--crimson);
+    padding: 14px 0;
+    overflow: hidden;
+  }
+  .notice-inner {
+    display: flex; align-items: center; gap: 0;
+    animation: marquee 22s linear infinite;
+    white-space: nowrap;
+  }
+  @keyframes marquee { from { transform: translateX(100vw); } to { transform: translateX(-100%); } }
+  .notice-inner span {
+    font-family: 'Noto Serif Bengali', serif;
+    font-size: 0.95rem; color: #fff; font-weight: 600;
+    padding: 0 48px;
+  }
+  .notice-inner .sep { color: rgba(255,255,255,0.4); font-size: 1.2rem; }
+
+  /* ── SECTIONS COMMON ── */
+  section { padding: 80px 0; }
+  .section-inner { max-width: 1200px; margin: auto; padding: 0 24px; }
+  .section-head { text-align: center; margin-bottom: 56px; }
+  .section-head .tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--crimson); margin-bottom: 10px; display: block;
+  }
+  .section-head h2 {
+    font-family: 'Noto Serif Bengali', serif;
+    font-size: clamp(1.7rem, 3vw, 2.4rem); font-weight: 700;
+    color: var(--navy); line-height: 1.3;
+  }
+  .section-head .rule {
+    display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 16px;
+  }
+  .section-head .rule::before, .section-head .rule::after {
+    content: ''; display: block; height: 1px; width: 64px; background: var(--gold);
+  }
+  .section-head .rule span {
+    color: var(--gold); font-size: 1.1rem;
+  }
+  .section-head p {
+    font-family: 'Noto Serif Bengali', serif;
+    color: #5a4a36; font-size: 0.97rem; line-height: 1.8; margin-top: 14px; max-width: 600px; margin-left: auto; margin-right: auto;
+  }
+
+  /* ── ABOUT ── */
+  #about { background: var(--cream); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .about-visual {
+    position: relative;
+  }
+  .about-img-frame {
+    background: var(--deep-blue);
+    border-radius: 8px; padding: 40px;
+    display: flex; align-items: center; justify-content: center;
+    min-height: 380px; position: relative; overflow: hidden;
+  }
+  .about-img-frame::before {
+    content: '⚖';
+    font-size: 14rem; color: rgba(201,147,58,0.08);
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .about-img-frame .since {
+    text-align: center; z-index: 2; position: relative;
+  }
+  .about-img-frame .since .year {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem; font-weight: 900; color: var(--gold-light);
+    line-height: 1;
+  }
+  .about-img-frame .since p {
+    color: rgba(255,255,255,0.6); font-size: 0.9rem;
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 0.12em; text-transform: uppercase; margin-top: 6px;
+  }
+  .about-badge-corner {
+    position: absolute; bottom: -18px; right: -18px;
+    width: 100px; height: 100px; background: var(--crimson);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    flex-direction: column; text-align: center;
+    box-shadow: 0 6px 20px rgba(192,32,42,0.45);
+    border: 3px solid var(--cream);
+  }
+  .about-badge-corner .big { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 900; color: #fff; line-height: 1; }
+  .about-badge-corner .sm { font-size: 0.6rem; color: rgba(255,255,255,0.8); letter-spacing: 0.08em; text-transform: uppercase; }
+  .about-text h3 {
+    font-family: 'Noto Serif Bengali', serif;
+    font-size: 1.6rem; font-weight: 700; color: var(--navy); margin-bottom: 16px;
+  }
+  .about-text p {
+    font-family: 'Noto Serif Bengali', serif;
+    color: #4a3c28; font-size: 0.97rem; line-height: 1.9; margin-bottom: 16px;
+  }
+  .about-features {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 28px;
+  }
+  .feat-item {
+    display: flex; align-items: flex-start; gap: 10px;
+    background: var(--parchment); border-radius: 6px; padding: 14px 16px;
+    border-left: 3px solid var(--gold);
+  }
+  .feat-item .icon { font-size: 1.3rem; line-height: 1; margin-top: 2px; }
+  .feat-item p { font-family: 'Noto Serif Bengali', serif; font-size: 0.86rem; color: var(--text-mid); line-height: 1.5; }
+
+  /* ── PROGRAM ── */
+  #program { background: var(--parchment); }
+  .program-card {
+    background: var(--white);
+    border-radius: 10px; overflow: hidden;
+    box-shadow: 0 8px 32px rgba(10,22,40,0.1);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  }
+  .prog-left {
+    background: linear-gradient(160deg, var(--navy) 0%, var(--royal) 100%);
+    padding: 52px 44px; position: relative; overflow: hidden;
+  }
+  .prog-left::after {
+    content: 'LLB'; position: absolute; bottom: -20px; right: -10px;
+    font-family: 'Playfair Display', serif; font-size: 8rem; font-weight: 900;
+    color: rgba(255,255,255,0.04); line-height: 1;
+  }
+  .prog-left .degree-tag {
+    display: inline-block; background: var(--gold); color: var(--navy);
+    font-family: 'Playfair Display', serif; font-size: 0.75rem;
+    font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 4px 12px; border-radius: 2px; margin-bottom: 20px;
+  }
+  .prog-left h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem; font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 8px;
+  }
+  .prog-left .bn-title {
+    font-family: 'Noto Serif Bengali', serif;
+    font-size: 1.2rem; color: var(--gold-light); margin-bottom: 20px;
+  }
+  .prog-left p {
+    font-family: 'Noto Serif Bengali', serif;
+    color: rgba(255,255,255,0.65); font-size: 0.9rem; line-height: 1.8;
+  }
+  .prog-right { padding: 52px 44px; }
+  .prog-detail { margin-bottom: 28px; }
+  .prog-detail .label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--crimson); margin-bottom: 4px;
+  }
+  .prog-detail .val {
+    font-family: 'Noto Serif Bengali', serif;
+    font-size: 1.05rem; font-weight: 600; color: var(--navy);
+  }
+  .prog-divider { height: 1px; background: var(--border-gold); margin: 20px 0; }
+  .eligibility-list { list-style: none; }
+  .eligibility-list li {
+    font-family: 'Noto Serif Bengali', serif;
+    font-size: 0.9rem; color: #4a3c28; padding: 7px 0;
+    border-bottom: 1px dashed rgba(201,147,58,0.25);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .eligibility-list li::before { content: '✓'; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+
+  /* ── FEATURES ── */
+  #features { background: var(--navy); }
+  #features .section-head h2 { color: #fff; }
+  #features .section-head p { color: rgba(255,255,255,0.55); }
+  #features .section-head .rule::before, #features .section-head .rule::after { background: var(--gold); }
+  .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .feature-box {
+    border: 1px solid rgba(201,147,58,0.18);
+    border-radius: 8px; padding: 36px 28px;
+    background: rgba(255,255,255,0.03);
+    transition: all 0.3s; position: relative; overflow: hidden;
+  }
+  .feature-box::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--crimson));
+    transform: scaleX(0); transform-origin: left; transition: transform 0.3s;
+  }
+  .feature-box:hover { background: rgba(201,147,58,0.06); border-color: rgba(201,147,58,0.4); transform: translateY(-4px); }
+  .feature-box:hover::before { transform: scaleX(1); }
+  .feature-box .ico {
+    font-size: 2.2rem; margin-bottom: 18px; display: block;
+  }
+  .feature-box h4 {
+    font-family: 'Noto Serif Bengali', serif;
+    font-size: 1.05rem; font-weight: 700; color: var(--gold-light); margin-bottom: 10px;
+  }
+  .feature-box p {
+    font-family: 'Noto Serif Bengali', serif;
+    font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.75;
+  }
+
+  /* ── TEACHERS ── */
+  #teachers { background: var(--cream); }
+  .teachers-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .teacher-card {
+    background: var(--white); border-radius: 10px;
+    overflow: hidden; box-shadow: 0 4px 20px rgba(10,22,40,0.08);
+    transition: all 0.3s; text-align: center;
+  }
+  .teacher-card:hover { transform: translateY(-6px); box-shadow: 0 12px 36px rgba(10,22,40,0.15); }
+  .teacher-photo {
+    background: linear-gradient(160deg, var(--deep-blue), var(--royal));
+    height: 180px; display: flex; align-items: center; justify-content: center;
+    font-size: 4rem; position: relative; overflow: hidden;
+  }
+  .teacher-photo::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+    height: 40px; background: linear-gradient(transparent, rgba(13,34,71,0.5));
+  }
+  .teacher-info { padding: 20px 16px; }
+  .teacher-info h4 {
+    font-family: 'Noto Serif Bengali', serif;
+    font-size: 0.97rem; font-weight: 700; color: var(--navy); margin-bottom: 4px;
+  }
+  .teacher-info .role {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.82rem; color: var(--crimson); letter-spacing: 0.06em;
+    text-transform: uppercase; margin-bottom: 6px;
+  }
+  .teacher-info .degree {
+    font-family: 'Noto Serif Bengali', serif;
+    font-size: 0.8rem; color: #7a6a50;
+  }
+  .teacher-note {
+    text-align: center; margin-top: 32px;
+    font-family: 'Noto Serif Bengali', serif; color: #5a4a36; font-size: 0.9rem;
+  }
+  .teacher-note strong { color: var(--navy); }
+
+  /* ── EVENTS ── */
+  #events { background: var(--parchment); }
+  .events-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .event-card {
+    display: flex; gap: 20px;
+    background: var(--white); border-radius: 8px; padding: 24px;
+    box-shadow: 0 3px 16px rgba(10,22,40,0.07); transition: all 0.3s;
+    border-left: 4px solid var(--gold);
+  }
+  .event-card:hover { transform: translateX(4px); box-shadow: 0 6px 28px rgba(10,22,40,0.12); }
+  .event-date {
+    background: var(--deep-blue); border-radius: 6px;
+    padding: 10px 14px; text-align: center; flex-shrink: 0;
+    min-width: 64px;
+  }
+  .event-date .day { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 900; color: var(--gold-light); line-height: 1; }
+  .event-date .mon { font-family: 'Cormorant Garamond', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-top: 3px; }
+  .event-info h4 {
+    font-family: 'Noto Serif Bengali', serif;
+    font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 6px;
+  }
+  .event-info p { font-family: 'Noto Serif Bengali', serif; font-size: 0.85rem; color: #6a5a40; line-height: 1.6; }
+  .event-info .tag-badge {
+    display: inline-block; background: rgba(192,32,42,0.1); color: var(--crimson);
+    font-size: 0.72rem; padding: 2px 8px; border-radius: 20px; margin-top: 8px;
+    font-family: 'Cormorant Garamond', serif; letter-spacing: 0.06em; text-transform: uppercase;
+  }
+
+  /* ── GALLERY ── */
+  #gallery { background: var(--navy); }
+  #gallery .section-head h2 { color: #fff; }
+  #gallery .section-head p { color: rgba(255,255,255,0.55); }
+  #gallery .section-head .rule::before, #gallery .section-head .rule::after { background: var(--gold); }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 200px 200px;
+    gap: 12px;
+  }
+  .gallery-item {
+    border-radius: 6px; overflow: hidden; position: relative;
+    background: var(--deep-blue); cursor: pointer;
+    transition: all 0.3s;
+  }
+  .gallery-item:first-child { grid-column: span 2; grid-row: span 2; }
+  .gallery-item:hover .gallery-overlay { opacity: 1; }
+  .gallery-item:hover { transform: scale(1.02); z-index: 2; }
+  .gallery-thumb {
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3rem;
+    background: var(--deep-blue);
+    position: relative;
+  }
+  .gallery-item:nth-child(1) .gallery-thumb { font-size: 5rem; background: linear-gradient(135deg, var(--royal), var(--deep-blue)); }
+  .gallery-item:nth-child(2) .gallery-thumb { background: linear-gradient(135deg, #1a2e5a, var(--navy)); }
+  .gallery-item:nth-child(3) .gallery-thumb { background: linear-gradient(135deg, #0d1e3c, #182d55); }
+  .gallery-item:nth-child(4) .gallery-thumb { background: linear-gradient(135deg, #142240, #0a1628); }
+  .gallery-item:nth-child(5) .gallery-thumb { background: linear-gradient(135deg, #152545, var(--deep-blue)); }
+  .gallery-overlay {
+    position: absolute; inset: 0;
+    background: rgba(192,32,42,0.7);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity 0.3s;
+    font-family: 'Noto Serif Bengali', serif; color: #fff; font-size: 0.9rem; font-weight: 600;
+  }
+
+  /* ── ADMISSION ── */
+  #admission {
+    background: linear-gradient(135deg, var(--crimson) 0%, #8a1218 100%);
+    padding: 80px 0; position: relative; overflow: hidden;
+  }
+  #admission::before {
+    content: '⚖'; position: absolute;
+    font-size: 30rem; color: rgba(255,255,255,0.03);
+    right: -60px; top: 50%; transform: translateY(-50%);
+    font-family: serif; line-height: 1;
+  }
+  .admission-inner {
+    max-width: 1200px; margin: auto; padding: 0 24px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+    position: relative; z-index: 2;
+  }
+  .adm-left h2 {
+    font-family: 'Noto Serif Bengali', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 800; color: #fff; line-height: 1.3; margin-bottom: 16px;
+  }
+  .adm-left p {
+    font-family: 'Noto Serif Bengali', serif;
+    color: rgba(255,255,255,0.75); font-size: 0.97rem; line-height: 1.8; margin-bottom: 28px;
+  }
+  .adm-left .session-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 2px; padding: 8px 18px;
+    font-family: 'Noto Serif Bengali', serif; color: #fff; font-size: 1rem; font-weight: 700;
+    margin-bottom: 28px;
+  }
+  .adm-right {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 10px; padding: 36px;
+  }
+  .adm-right h3 {
+    font-family: 'Noto Serif Bengali', serif;
+    font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 20px;
+  }
+  .adm-form-group { margin-bottom: 16px; }
+  .adm-form-group label {
+    display: block; font-family: 'Noto Serif Bengali', serif;
+    font-size: 0.82rem; color: rgba(255,255,255,0.7); margin-bottom: 6px;
+  }
+  .adm-form-group input, .adm-form-group select {
+    width: 100%; background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2); border-radius: 4px;
+    padding: 10px 14px; color: #fff;
+    font-family: 'Noto Serif Bengali', serif; font-size: 0.9rem;
+    outline: none; transition: border 0.2s;
+  }
+  .adm-form-group input::placeholder { color: rgba(255,255,255,0.35); }
+  .adm-form-group input:focus, .adm-form-group select:focus { border-color: rgba(255,255,255,0.5); }
+  .adm-form-group select option { background: var(--crimson); }
+  .btn-submit {
+    width: 100%; background: var(--gold); color: var(--navy);
+    padding: 13px; border-radius: 4px; border: none; cursor: pointer;
+    font-family: 'Noto Serif Bengali', serif; font-size: 1rem; font-weight: 700;
+    transition: all 0.25s; box-shadow: 0 4px 16px rgba(201,147,58,0.4);
+  }
+  .btn-submit:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+  /* ── NOTICE BOARD ── */
+  #notices { background: var(--cream); }
+  .notices-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 32px; }
+  .notice-list { background: var(--white); border-radius: 10px; overflow: hidden; box-shadow: 0 4px 20px rgba(10,22,40,0.07); }
+  .notice-list-header {
+    background: var(--deep-blue); padding: 18px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .notice-list-header h3 {
+    font-family: 'Noto Serif Bengali', serif; font-size: 1rem; font-weight: 700; color: #fff;
+  }
+  .notice-list-header .badge {
+    background: var(--crimson); color: #fff;
+    font-size: 0.72rem; padding: 2px 10px; border-radius: 20px;
+    font-family: 'Cormorant Garamond', serif; letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .notice-item {
+    display: flex; gap: 16px; padding: 18px 24px;
+    border-bottom: 1px solid rgba(201,147,58,0.15); transition: background 0.2s;
+  }
+  .notice-item:last-child { border-bottom: none; }
+  .notice-item:hover { background: rgba(201,147,58,0.04); }
+  .notice-item .date-dot {
+    display: flex; flex-direction: column; align-items: center; flex-shrink: 0; padding-top: 4px;
+  }
+  .notice-item .date-dot .dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--gold); margin-bottom: 4px;
+  }
+  .notice-item .date-dot .line {
+    width: 1px; flex: 1; background: rgba(201,147,58,0.2); min-height: 24px;
+  }
+  .notice-item .content h5 {
+    font-family: 'Noto Serif Bengali', serif; font-size: 0.93rem; font-weight: 600; color: var(--navy); margin-bottom: 4px;
+  }
+  .notice-item .content p {
+    font-family: 'Noto Serif Bengali', serif; font-size: 0.82rem; color: #7a6a50;
+  }
+  .notice-item .content .new-tag {
+    display: inline-block; background: var(--crimson); color: #fff;
+    font-size: 0.65rem; padding: 1px 7px; border-radius: 2px; margin-left: 6px;
+    font-family: 'Cormorant Garamond', serif; letter-spacing: 0.06em; text-transform: uppercase; vertical-align: middle;
+  }
+  .quick-info { display: flex; flex-direction: column; gap: 16px; }
+  .info-widget {
+    background: var(--white); border-radius: 10px; padding: 24px;
+    box-shadow: 0 4px 20px rgba(10,22,40,0.07);
+  }
+  .info-widget h4 {
+    font-family: 'Noto Serif Bengali', serif; font-size: 0.95rem; font-weight: 700;
+    color: var(--navy); margin-bottom: 14px; padding-bottom: 10px;
+    border-bottom: 1px solid rgba(201,147,58,0.25);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .info-widget h4::before { content: attr(data-ico); font-size: 1.1rem; }
+  .info-row {
+    display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start;
+  }
+  .info-row .ico { font-size: 1rem; flex-shrink: 0; margin-top: 2px; }
+  .info-row p { font-family: 'Noto Serif Bengali', serif; font-size: 0.85rem; color: #5a4a36; line-height: 1.55; }
+  .info-row strong { color: var(--navy); display: block; font-size: 0.92rem; }
+  .social-links { display: flex; gap: 10px; flex-wrap: wrap; }
+  .social-btn {
+    display: flex; align-items: center; gap: 6px;
+    padding: 8px 14px; border-radius: 4px;
+    font-family: 'Noto Serif Bengali', serif; font-size: 0.82rem; font-weight: 600;
+    text-decoration: none; transition: all 0.2s;
+  }
+  .social-btn.fb { background: #1877F2; color: #fff; }
+  .social-btn.fb:hover { background: #1565d8; }
+  .social-btn.yt { background: #FF0000; color: #fff; }
+  .social-btn.yt:hover { background: #cc0000; }
+  .social-btn.wa { background: #25D366; color: #fff; }
+  .social-btn.wa:hover { background: #1eb658; }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--deep-blue); }
+  #contact .section-head h2 { color: #fff; }
+  #contact .section-head p { color: rgba(255,255,255,0.55); }
+  #contact .section-head .rule::before, #contact .section-head .rule::after { background: var(--gold); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+  .contact-card {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(201,147,58,0.2);
+    border-radius: 10px; padding: 32px 28px; text-align: center; transition: all 0.3s;
+  }
+  .contact-card:hover { background: rgba(201,147,58,0.08); border-color: rgba(201,147,58,0.4); }
+  .contact-card .cico { font-size: 2.4rem; margin-bottom: 14px; }
+  .contact-card h4 {
+    font-family: 'Noto Serif Bengali', serif;
+    font-size: 0.92rem; font-weight: 700; color: var(--gold-light); margin-bottom: 12px;
+    letter-spacing: 0.03em;
+  }
+  .contact-card p, .contact-card a {
+    font-family: 'Noto Serif Bengali', serif;
+    font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.7;
+    text-decoration: none; display: block;
+  }
+  .contact-card a:hover { color: var(--gold-light); }
+
+  /* ── MAP AREA ── */
+  .map-placeholder {
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(201,147,58,0.2);
+    border-radius: 10px; height: 280px;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 12px; margin-top: 32px;
+    cursor: pointer; transition: all 0.3s;
+  }
+  .map-placeholder:hover { background: rgba(201,147,58,0.06); border-color: rgba(201,147,58,0.4); }
+  .map-placeholder .map-ico { font-size: 3rem; }
+  .map-placeholder p {
+    font-family: 'Noto Serif Bengali', serif;
+    color: rgba(255,255,255,0.5); font-size: 0.9rem;
+  }
+  .map-placeholder a {
+    color: var(--gold-light); text-decoration: none;
+    font-family: 'Cormorant Garamond', serif; letter-spacing: 0.08em;
+    font-size: 0.85rem; text-transform: uppercase;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    border-top: 1px solid rgba(201,147,58,0.2);
+    padding: 48px 0 0;
+  }
+  .footer-inner {
+    max-width: 1200px; margin: auto; padding: 0 24px;
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
+  }
+  .footer-brand .logo {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 16px;
+  }
+  .footer-brand .logo .crest {
+    width: 44px; height: 44px; background: var(--gold); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 900; color: var(--navy);
+  }
+  .footer-brand .logo .txt .en {
+    font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: #fff;
+  }
+  .footer-brand .logo .txt .bn {
+    font-family: 'Noto Serif Bengali', serif; font-size: 0.72rem; color: var(--gold-light);
+  }
+  .footer-brand p {
+    font-family: 'Noto Serif Bengali', serif; font-size: 0.85rem; color: rgba(255,255,255,0.45); line-height: 1.8; max-width: 280px;
+  }
+  .footer-col h5 {
+    font-family: 'Playfair Display', serif; font-size: 0.88rem; font-weight: 700;
+    color: var(--gold-light); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 8px; }
+  .footer-col ul li a {
+    font-family: 'Noto Serif Bengali', serif; font-size: 0.85rem;
+    color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s;
+  }
+  .footer-col ul li a:hover { color: var(--gold-light); }
+  .footer-bottom {
+    margin-top: 40px; padding: 18px 24px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    max-width: 1200px; margin-left: auto; margin-right: auto;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;
+  }
+  .footer-bottom p {
+    font-family: 'Cormorant Garamond', serif; font-size: 0.82rem;
+    color: rgba(255,255,255,0.3); letter-spacing: 0.04em;
+  }
+  .footer-bottom .motto {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--gold); font-size: 0.9rem;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .teachers-grid { grid-template-columns: repeat(2, 1fr); }
+    .contact-grid { grid-template-columns: 1fr 1fr; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 768px) {
+    .hero-content { grid-template-columns: 1fr; gap: 40px; padding: 60px 24px; }
+    .hero-right { grid-template-columns: repeat(2, 1fr); }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .program-card { grid-template-columns: 1fr; }
+    .features-grid { grid-template-columns: 1fr 1fr; }
+    .events-grid { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+    .gallery-item:first-child { grid-column: span 2; }
+    .admission-inner { grid-template-columns: 1fr; gap: 36px; }
+    .notices-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--deep-blue); padding: 16px; gap: 4px; }
+    .nav-links.open { display: flex; }
+    .hamburger { display: flex; }
+    nav { position: relative; }
+  }
+  @media (max-width: 480px) {
+    .features-grid { grid-template-columns: 1fr; }
+    .teachers-grid { grid-template-columns: 1fr 1fr; }
+    .hero-right { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* ── SCROLL REVEAL ── */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* ── FLOATING CTA ── */
+  .float-apply {
+    position: fixed; bottom: 28px; right: 28px; z-index: 900;
+    background: var(--crimson); color: #fff;
+    padding: 14px 22px; border-radius: 50px;
+    font-family: 'Noto Serif Bengali', serif; font-size: 0.88rem; font-weight: 700;
+    text-decoration: none; box-shadow: 0 6px 24px rgba(192,32,42,0.5);
+    display: flex; align-items: center; gap: 8px;
+    transition: all 0.25s; border: 2px solid rgba(255,255,255,0.25);
+    animation: pulse-float 2.5s ease-in-out infinite;
+  }
+  .float-apply:hover { transform: scale(1.05); box-shadow: 0 10px 36px rgba(192,32,42,0.65); }
+  @keyframes pulse-float {
+    0%, 100% { box-shadow: 0 6px 24px rgba(192,32,42,0.5); }
+    50% { box-shadow: 0 6px 32px rgba(192,32,42,0.75), 0 0 0 8px rgba(192,32,42,0.1); }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="inner">
+    <span>📞 01736352747 &nbsp;|&nbsp; 01910377686 &nbsp;|&nbsp; 01937661229</span>
+    <div>
+      <a href="mailto:info@banasreelawcollege.edu.bd">✉ info@banasreelawcollege.edu.bd</a>
+      <a href="#">জাতীয় বিশ্ববিদ্যালয় অনুমোদিত</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="crest">B</div>
+      <div class="name-block">
+        <div class="en">Banasree Law College</div>
+        <div class="bn">বনশ্রী ল' কলেজ · ঢাকা</div>
+      </div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">পরিচিতি</a>
+      <a href="#program">প্রোগ্রাম</a>
+      <a href="#teachers">শিক্ষকমণ্ডলী</a>
+      <a href="#events">ইভেন্ট</a>
+      <a href="#gallery">গ্যালারি</a>
+      <a href="#notices">নোটিশ</a>
+      <a href="#contact">যোগাযোগ</a>
+      <a href="#admission" class="btn-apply">ভর্তি হন</a>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-scales">⚖</div>
+  <div class="hero-content">
+    <div class="hero-left reveal">
+      <div class="hero-badge">জাতীয় বিশ্ববিদ্যালয় অধিভুক্ত</div>
+      <h1>বনশ্রী ল' কলেজ<br><span class="gold">Banasree Law College</span></h1>
+      <p class="subtitle">Banasree, Rampura · Dhaka</p>
+      <p>আইন পেশায় দক্ষ ও যোগ্য আইনজীবী তৈরিতে আমরা প্রতিশ্রুতিবদ্ধ। কম খরচে জাতীয় বিশ্ববিদ্যালয়ের অধীনে ২ বছর মেয়াদী LL.B ডিগ্রি অর্জন করুন এবং একটি উজ্জ্বল ভবিষ্যৎ গড়ুন।</p>
+      <div class="hero-ctas">
+        <a href="#admission" class="btn-primary">এখনই ভর্তি হন →</a>
+        <a href="#program" class="btn-outline">প্রোগ্রাম দেখুন</a>
+      </div>
+    </div>
+    <div class="hero-right reveal">
+      <div class="stat-card"><div class="num">২+</div><div class="label">বছর মেয়াদী<br>LL.B ডিগ্রি</div></div>
+      <div class="stat-card"><div class="num">১০০%</div><div class="label">ক্লাসের<br>নিশ্চয়তা</div></div>
+      <div class="stat-card"><div class="num">AC</div><div class="label">শীতাতপ নিয়ন্ত্রিত<br>শ্রেণিকক্ষ</div></div>
+      <div class="stat-card"><div class="num">২</div><div class="label">শাখায় ভর্তির<br>সুযোগ (দিবা/নৈশ)</div></div>
+      <div class="stat-card wide"><div class="num">সেশন ২০২৬–২০২৭</div><div class="label">১ম বর্ষে ভর্তি চলছে — আসন সীমিত</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- NOTICE BAND -->
+<div class="notice-band">
+  <div class="notice-inner">
+    <span>🔔 বিশেষ বিজ্ঞপ্তি:</span>
+    <span class="sep">◆</span>
+    <span>LL.B ১ম বর্ষ ভর্তি চলছে — সেশন ২০২৬–২০২৭</span>
+    <span class="sep">◆</span>
+    <span>দিবা ও নৈশ উভয় শাখায় ভর্তির সুযোগ</span>
+    <span class="sep">◆</span>
+    <span>আসন সীমিত — আজই যোগাযোগ করুন: 01736352747</span>
+    <span class="sep">◆</span>
+    <span>মতিঝিল অ্যাডমিশন অফিস: নাজমুল এন্ড এসোসিয়েট, ৫৬–৫৭, মতিঝিল বাণিজ্যিক এলাকা</span>
+    <span class="sep">◆</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="tag">আমাদের সম্পর্কে</span>
+      <h2>সঠিক শিক্ষা, সুন্দর ভবিষ্যৎ, সাফল্যের নিশ্চয়তা</h2>
+      <div class="rule"><span>⚖</span></div>
+      <p>বনশ্রী ল' কলেজ একটি আধুনিক ও মানসম্পন্ন আইন শিক্ষা প্রতিষ্ঠান যা জাতীয় বিশ্ববিদ্যালয়ের অনুমোদনপ্রাপ্ত।</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-img-frame">
+          <div class="since">
+            <div class="year">LL.B</div>
+            <p>LAW COLLEGE · DHAKA</p>
+          </div>
+        </div>
+        <div class="about-badge-corner">
+          <div class="big">NU</div>
+          <div class="sm">অধিভুক্ত</div>
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <h3>কেন বনশ্রী ল' কলেজ?</h3>
+        <p>বনশ্রী ল' কলেজ ঢাকার বনশ্রীতে অবস্থিত একটি সুনামধন্য আইন শিক্ষা প্রতিষ্ঠান। আমাদের লক্ষ্য হলো শিক্ষার্থীদের আইনি জ্ঞান ও দক্ষতায় পরিপূর্ণ করে তোলা এবং তাদের একটি সফল আইনি ক্যারিয়ারের জন্য প্রস্তুত করা।</p>
+        <p>আমরা বিশ্বাস করি যে প্রতিটি শিক্ষার্থী সর্বোচ্চ মানের শিক্ষা পাওয়ার যোগ্য। তাই আমরা অভিজ্ঞ ও দক্ষ শিক্ষকমণ্ডলী, আধুনিক শ্রেণিকক্ষ এবং সমৃদ্ধ লাইব্রেরি ও রিডিং রুমের মাধ্যমে শিক্ষার্থীদের সর্বাঙ্গীণ উন্নয়নে কাজ করে যাচ্ছি।</p>
+        <div class="about-features">
+          <div class="feat-item"><span class="icon">🎓</span><p>অভিজ্ঞ শিক্ষকমণ্ডলী দ্বারা ক্লাস পরিচালনা</p></div>
+          <div class="feat-item"><span class="icon">❄️</span><p>AC শ্রেণিকক্ষে পাঠদান</p></div>
+          <div class="feat-item"><span class="icon">📚</span><p>সমৃদ্ধ লাইব্রেরি ও রিডিং রুম</p></div>
+          <div class="feat-item"><span class="icon">🛡️</span><p>শৃঙ্খলাবদ্ধ, নিরাপদ পরিবেশ</p></div>
+          <div class="feat-item"><span class="icon">🌙</span><p>দিবা ও নৈশ শাখায় ভর্তি</p></div>
+          <div class="feat-item"><span class="icon">✅</span><p>১০০% ক্লাসের নিশ্চয়তা</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section id="program">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="tag">আমাদের প্রোগ্রাম</span>
+      <h2>LL.B ডিগ্রি প্রোগ্রাম</h2>
+      <div class="rule"><span>⚖</span></div>
+      <p>জাতীয় বিশ্ববিদ্যালয়ের অধীনে স্বীকৃত ২ বছর মেয়াদী ব্যাচেলর অব ল' ডিগ্রি।</p>
+    </div>
+    <div class="program-card reveal">
+      <div class="prog-left">
+        <div class="degree-tag">National University</div>
+        <h3>LL.B</h3>
+        <div class="bn-title">ব্যাচেলর অব ল'</div>
+        <p>আইনের বিভিন্ন শাখায় গভীর জ্ঞান অর্জন করুন। দেওয়ানি আইন, ফৌজদারি আইন, সাংবিধানিক আইন, বাণিজ্যিক আইন সহ আইনের সকল মৌলিক বিষয় অধ্যয়ন করুন এবং একজন দক্ষ আইনজীবী হিসেবে নিজেকে প্রতিষ্ঠিত করুন।</p>
+      </div>
+      <div class="prog-right">
+        <div class="prog-detail">
+          <div class="label">মেয়াদ</div>
+          <div class="val">২ বছর (৪ সেমিস্টার)</div>
+        </div>
+        <div class="prog-detail">
+          <div class="label">সেশন</div>
+          <div class="val">২০২৬ – ২০২৭</div>
+        </div>
+        <div class="prog-detail">
+          <div class="label">শাখা</div>
+          <div class="val">দিবা শাখা ও নৈশ শাখা</div>
+        </div>
+        <div class="prog-detail">
+          <div class="label">অনুমোদন</div>
+          <div class="val">জাতীয় বিশ্ববিদ্যালয়, বাংলাদেশ</div>
+        </div>
+        <div class="prog-divider"></div>
+        <div class="prog-detail">
+          <div class="label">ভর্তির যোগ্যতা</div>
+        </div>
+        <ul class="eligibility-list">
+          <li>স্নাতক (পাস/সম্মান) ডিগ্রিধারী</li>
+          <li>যেকোনো বিভাগ থেকে ন্যূনতম দ্বিতীয় শ্রেণি</li>
+          <li>বাংলাদেশ বার কাউন্সিল নির্ধারিত নিয়ম অনুযায়ী</li>
+          <li>বয়সসীমা: সর্বোচ্চ ৪৫ বছর (ব্যতিক্রম প্রযোজ্য)</li>
+        </ul>
+        <div style="margin-top:24px">
+          <a href="#admission" class="btn-primary">ভর্তির জন্য আবেদন করুন →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="tag" style="color:var(--gold-light)">আমাদের বৈশিষ্ট্য</span>
+      <h2>কেন আমরা আলাদা</h2>
+      <div class="rule"><span>⚖</span></div>
+      <p>বনশ্রী ল' কলেজ শিক্ষার্থীদের সর্বোত্তম শিক্ষার পরিবেশ নিশ্চিত করতে প্রতিশ্রুতিবদ্ধ।</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-box reveal"><span class="ico">👨‍🏫</span><h4>অভিজ্ঞ শিক্ষকমণ্ডলী</h4><p>অভিজ্ঞ ও দক্ষ শিক্ষকমণ্ডলী দ্বারা ক্লাস পরিচালনা করা হয়। আমাদের শিক্ষকরা আইন পেশায় বিশেষজ্ঞ এবং বাস্তব অভিজ্ঞতাসম্পন্ন।</p></div>
+      <div class="feature-box reveal"><span class="ico">✅</span><h4>১০০% ক্লাসের নিশ্চয়তা</h4><p>আমরা প্রতিটি ক্লাস নিশ্চিত করি। কোনো ক্লাস বাতিল হলে বিকল্প ব্যবস্থায় পাঠদান সম্পন্ন করা হয়।</p></div>
+      <div class="feature-box reveal"><span class="ico">❄️</span><h4>AC শ্রেণিকক্ষ</h4><p>সকল শ্রেণিকক্ষ শীতাতপ নিয়ন্ত্রিত। আরামদায়ক পরিবেশে পড়াশোনা করুন এবং মনোযোগ দিয়ে ক্লাস করুন।</p></div>
+      <div class="feature-box reveal"><span class="ico">🌙</span><h4>দিবা ও নৈশ শাখা</h4><p>চাকুরিজীবীদের জন্য নৈশ শাখার বিশেষ ব্যবস্থা রয়েছে। নিজের সুবিধামতো সময়ে ক্লাস করুন।</p></div>
+      <div class="feature-box reveal"><span class="ico">📚</span><h4>সমৃদ্ধ লাইব্রেরি</h4><p>আইনের বই, জার্নাল এবং গবেষণা উপকরণে সমৃদ্ধ লাইব্রেরি। শিক্ষার্থীরা যেকোনো সময় রিডিং রুম ব্যবহার করতে পারবেন।</p></div>
+      <div class="feature-box reveal"><span class="ico">🛡️</span><h4>নিরাপদ পরিবেশ</h4><p>শৃঙ্খলাবদ্ধ ও নিরাপদ ক্যাম্পাস পরিবেশ। সকল শিক্ষার্থীর নিরাপত্তা আমাদের সর্বোচ্চ অগ্রাধিকার।</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEACHERS -->
+<section id="teachers">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="tag">শিক্ষকমণ্ডলী</span>
+      <h2>আমাদের দক্ষ শিক্ষকবৃন্দ</h2>
+      <div class="rule"><span>⚖</span></div>
+      <p>অভিজ্ঞ ও বিশেষজ্ঞ শিক্ষকমণ্ডলী শিক্ষার্থীদের আইনি জ্ঞান ও দক্ষতা বিকাশে নিরলস কাজ করে যাচ্ছেন।</p>
+    </div>
+    <div class="teachers-grid">
+      <div class="teacher-card reveal">
+        <div class="teacher-photo">👨‍⚖️</div>
+        <div class="teacher-info">
+          <h4>অধ্যাপক মো. আব্দুল করিম</h4>
+          <div class="role">অধ্যক্ষ</div>
+          <div class="degree">LL.B, LL.M (ঢাকা বিশ্ববিদ্যালয়)</div>
+        </div>
+      </div>
+      <div class="teacher-card reveal">
+        <div class="teacher-photo">👩‍⚖️</div>
+        <div class="teacher-info">
+          <h4>অ্যাডভোকেট রাহেলা বেগম</h4>
+          <div class="role">সিনিয়র প্রভাষক</div>
+          <div class="degree">LL.B, LL.M · বার কাউন্সিল এনরোলড</div>
+        </div>
+      </div>
+      <div class="teacher-card reveal">
+        <div class="teacher-photo">👨‍💼</div>
+        <div class="teacher-info">
+          <h4>অ্যাডভোকেট মো. জামাল হোসেন</h4>
+          <div class="role">প্রভাষক — ফৌজদারি আইন</div>
+          <div class="degree">LL.B, LL.M (জাতীয় বিশ্ববিদ্যালয়)</div>
+        </div>
+      </div>
+      <div class="teacher-card reveal">
+        <div class="teacher-photo">👩‍💼</div>
+        <div class="teacher-info">
+          <h4>অ্যাডভোকেট সুমাইয়া আক্তার</h4>
+          <div class="role">প্রভাষক — দেওয়ানি আইন</div>
+          <div class="degree">LL.B, LL.M · উচ্চ আদালতে প্র্যাকটিস</div>
+        </div>
+      </div>
+    </div>
+    <p class="teacher-note reveal" style="margin-top:28px">আমাদের সকল শিক্ষক <strong>বাংলাদেশ বার কাউন্সিল</strong> নিবন্ধিত এবং সক্রিয় আইন পেশায় নিযুক্ত।</p>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="tag">ইভেন্ট ও কার্যক্রম</span>
+      <h2>আসন্ন ও সাম্প্রতিক ইভেন্ট</h2>
+      <div class="rule"><span>⚖</span></div>
+      <p>মুটকোর্ট প্র্যাকটিস, সেমিনার, আইনি সাহায্য ক্যাম্প সহ বিভিন্ন কার্যক্রমে অংশ নিন।</p>
+    </div>
+    <div class="events-grid">
+      <div class="event-card reveal">
+        <div class="event-date"><div class="day">১৫</div><div class="mon">জুন</div></div>
+        <div class="event-info">
+          <h4>ভর্তি ওরিয়েন্টেশন প্রোগ্রাম</h4>
+          <p>নতুন শিক্ষার্থীদের জন্য বিশেষ ওরিয়েন্টেশন। কলেজের নিয়মকানুন, পাঠ্যক্রম ও ভবিষ্যৎ ক্যারিয়ার নিয়ে আলোচনা।</p>
+          <span class="tag-badge">ভর্তি</span>
+        </div>
+      </div>
+      <div class="event-card reveal">
+        <div class="event-date"><div class="day">২২</div><div class="mon">জুন</div></div>
+        <div class="event-info">
+          <h4>মুট কোর্ট প্র্যাকটিস সেশন</h4>
+          <p>শিক্ষার্থীদের জন্য বাস্তব আদালত অনুশীলনের সুযোগ। অভিজ্ঞ আইনজীবীদের তত্ত্বাবধানে মামলা পরিচালনার অভিজ্ঞতা।</p>
+          <span class="tag-badge">একাডেমিক</span>
+        </div>
+      </div>
+      <div class="event-card reveal">
+        <div class="event-date"><div class="day">০৫</div><div class="mon">জুলা</div></div>
+        <div class="event-info">
+          <h4>আইনি সাহায্য ক্যাম্প</h4>
+          <p>সুবিধাবঞ্চিত মানুষদের জন্য বিনামূল্যে আইনি পরামর্শ সেবা। শিক্ষার্থীরা সক্রিয়ভাবে অংশগ্রহণ করবেন।</p>
+          <span class="tag-badge">সামাজিক</span>
+        </div>
+      </div>
+      <div class="event-card reveal">
+        <div class="event-date"><div class="day">২০</div><div class="mon">জুলা</div></div>
+        <div class="event-info">
+          <h4>সাংবিধানিক আইন সেমিনার</h4>
+          <p>বাংলাদেশের সংবিধান ও মৌলিক অধিকার বিষয়ক বিশেষ সেমিনার। বিশেষজ্ঞ বক্তাদের উপস্থিতিতে আলোচনা।</p>
+          <span class="tag-badge">সেমিনার</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="tag" style="color:var(--gold-light)">ফটো গ্যালারি</span>
+      <h2>আমাদের ক্যাম্পাস ও কার্যক্রম</h2>
+      <div class="rule"><span>⚖</span></div>
+      <p>আমাদের আধুনিক ক্যাম্পাস, শ্রেণিকক্ষ এবং বিভিন্ন কার্যক্রমের ছবি।</p>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item">
+        <div class="gallery-thumb">🏛️</div>
+        <div class="gallery-overlay">কলেজ ভবন</div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-thumb">📚</div>
+        <div class="gallery-overlay">লাইব্রেরি</div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-thumb">🎓</div>
+        <div class="gallery-overlay">সনদ বিতরণ</div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-thumb">⚖️</div>
+        <div class="gallery-overlay">মুট কোর্ট</div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-thumb">👨‍🏫</div>
+        <div class="gallery-overlay">ক্লাসরুম</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADMISSION -->
+<section id="admission">
+  <div class="admission-inner">
+    <div class="adm-left reveal">
+      <h2>LL.B ১ম বর্ষে<br>ভর্তি চলছে!</h2>
+      <p>সেশন ২০২৬–২০২৭ এর জন্য ভর্তি কার্যক্রম শুরু হয়েছে। আসন সংখ্যা সীমিত, তাই দেরি না করে আজই আবেদন করুন।</p>
+      <div class="session-badge">📅 সেশন: ২০২৬ – ২০২৭</div>
+      <div style="display:flex; gap:14px; flex-wrap:wrap">
+        <div style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.8);font-family:'Noto Serif Bengali',serif;font-size:0.88rem">✅ দিবা শাখা</div>
+        <div style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.8);font-family:'Noto Serif Bengali',serif;font-size:0.88rem">✅ নৈশ শাখা</div>
+        <div style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.8);font-family:'Noto Serif Bengali',serif;font-size:0.88rem">✅ কম খরচে</div>
+        <div style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.8);font-family:'Noto Serif Bengali',serif;font-size:0.88rem">✅ NU অনুমোদিত</div>
+      </div>
+    </div>
+    <div class="adm-right reveal">
+      <h3>প্রাথমিক আবেদন ফর্ম</h3>
+      <div class="adm-form-group">
+        <label>পূর্ণ নাম *</label>
+        <input type="text" placeholder="আপনার সম্পূর্ণ নাম লিখুন">
+      </div>
+      <div class="adm-form-group">
+        <label>মোবাইল নম্বর *</label>
+        <input type="tel" placeholder="01XXXXXXXXX">
+      </div>
+      <div class="adm-form-group">
+        <label>ইমেইল</label>
+        <input type="email" placeholder="example@email.com">
+      </div>
+      <div class="adm-form-group">
+        <label>শাখা *</label>
+        <select>
+          <option>শাখা নির্বাচন করুন</option>
+          <option>দিবা শাখা</option>
+          <option>নৈশ শাখা</option>
+        </select>
+      </div>
+      <button class="btn-submit" onclick="alert('ধন্যবাদ! আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব।')">আবেদন জমা দিন →</button>
+    </div>
+  </div>
+</section>
+
+<!-- NOTICES -->
+<section id="notices">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="tag">নোটিশ বোর্ড</span>
+      <h2>সর্বশেষ নোটিশ ও ঘোষণা</h2>
+      <div class="rule"><span>⚖</span></div>
+    </div>
+    <div class="notices-grid">
+      <div class="notice-list reveal">
+        <div class="notice-list-header">
+          <h3>📋 নোটিশ বোর্ড</h3>
+          <span class="badge">সর্বশেষ</span>
+        </div>
+        <div class="notice-item">
+          <div class="date-dot"><div class="dot"></div><div class="line"></div></div>
+          <div class="content">
+            <h5>LL.B ১ম বর্ষ ভর্তি বিজ্ঞপ্তি — সেশন ২০২৬–২০২৭ <span class="new-tag">NEW</span></h5>
+            <p>০১ জুন ২০২৬ · ভর্তি কার্যক্রম শুরু হয়েছে। আগ্রহী প্রার্থীরা অফিসে যোগাযোগ করুন।</p>
+          </div>
+        </div>
+        <div class="notice-item">
+          <div class="date-dot"><div class="dot"></div><div class="line"></div></div>
+          <div class="content">
+            <h5>ক্লাস রুটিন — জুন ২০২৬ <span class="new-tag">NEW</span></h5>
+            <p>১৫ মে ২০২৬ · নতুন ক্লাস রুটিন প্রকাশিত হয়েছে। নোটিশ বোর্ড থেকে সংগ্রহ করুন।</p>
+          </div>
+        </div>
+        <div class="notice-item">
+          <div class="date-dot"><div class="dot"></div><div class="line"></div></div>
+          <div class="content">
+            <h5>জাতীয় বিশ্ববিদ্যালয় পরীক্ষার সময়সূচি</h5>
+            <p>০১ মে ২০২৬ · চূড়ান্ত পরীক্ষার তারিখ ঘোষণা করা হয়েছে। সকল শিক্ষার্থী অবহিত হন।</p>
+          </div>
+        </div>
+        <div class="notice-item">
+          <div class="date-dot"><div class="dot"></div><div class="line"></div></div>
+          <div class="content">
+            <h5>মুট কোর্ট প্র্যাকটিস সেশনের নিবন্ধন</h5>
+            <p>২০ এপ্রিল ২০২৬ · আগ্রহী শিক্ষার্থীরা ২৫ এপ্রিলের মধ্যে নিবন্ধন করুন।</p>
+          </div>
+        </div>
+        <div class="notice-item">
+          <div class="date-dot"><div class="dot"></div></div>
+          <div class="content">
+            <h5>লাইব্রেরি সময়সূচি পরিবর্তন</h5>
+            <p>১০ এপ্রিল ২০২৬ · রমজান মাসে লাইব্রেরি নতুন সময়সূচিতে পরিচালিত হবে।</p>
+          </div>
+        </div>
+      </div>
+      <div class="quick-info reveal">
+        <div class="info-widget">
+          <h4 data-ico="📍">যোগাযোগের ঠিকানা</h4>
+          <div class="info-row">
+            <span class="ico">🏫</span>
+            <p><strong>প্রধান অফিস</strong>হাউস # ১০, রক # এফ, বনশ্রী মেইন রোড, বনশ্রী, রামপুরা, ঢাকা-১২১৯</p>
+          </div>
+          <div class="info-row">
+            <span class="ico">🏢</span>
+            <p><strong>মতিঝিল অ্যাডমিশন অফিস</strong>নাজমুল এন্ড এসোসিয়েট, ৫৬-৫৭, মতিঝিল বাণিজ্যিক এলাকা (চতুর্থ তলা), শরিফ ম্যানশন, মতিঝিল, ঢাকা।</p>
+          </div>
+        </div>
+        <div class="info-widget">
+          <h4 data-ico="📞">ফোন নম্বর</h4>
+          <div class="info-row"><span class="ico">📱</span><p><strong>01736352747</strong><br><strong>01910377686</strong></p></div>
+          <div class="info-row"><span class="ico">📱</span><p><strong>01937661229</strong><br><strong>01700991729</strong></p></div>
+        </div>
+        <div class="info-widget">
+          <h4 data-ico="🌐">সোশ্যাল মিডিয়া</h4>
+          <div class="social-links">
+            <a href="#" class="social-btn fb">📘 Facebook</a>
+            <a href="#" class="social-btn yt">▶ YouTube</a>
+            <a href="#" class="social-btn wa">💬 WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="tag" style="color:var(--gold-light)">যোগাযোগ করুন</span>
+      <h2>আমাদের সাথে কথা বলুন</h2>
+      <div class="rule"><span>⚖</span></div>
+      <p>ভর্তি বা যেকোনো তথ্যের জন্য আমাদের সাথে যোগাযোগ করুন।</p>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="contact-card">
+        <div class="cico">📞</div>
+        <h4>ফোন / হোয়াটসঅ্যাপ</h4>
+        <a href="tel:01736352747">01736352747</a>
+        <a href="tel:01910377686">01910377686</a>
+        <a href="tel:01937661229">01937661229</a>
+        <a href="tel:01700991729">01700991729</a>
+      </div>
+      <div class="contact-card">
+        <div class="cico">📍</div>
+        <h4>আমাদের ঠিকানা</h4>
+        <p>হাউস # ১০, রক # এফ<br>বনশ্রী মেইন রোড, বনশ্রী<br>রামপুরা, ঢাকা-১২১৯</p>
+        <p style="margin-top:10px;color:rgba(255,255,255,0.4);font-size:0.78rem">মতিঝিল অ্যাডমিশন অফিস:<br>শরিফ ম্যানশন (৪র্থ তলা)<br>৫৬–৫৭, মতিঝিল বাণিজ্যিক এলাকা</p>
+      </div>
+      <div class="contact-card">
+        <div class="cico">🕐</div>
+        <h4>অফিস সময়</h4>
+        <p>শনি – বৃহস্পতি<br>সকাল ৯টা – রাত ৯টা</p>
+        <p style="margin-top:10px">শুক্রবার<br>সকাল ১০টা – বিকাল ৫টা</p>
+        <p style="margin-top:10px;color:var(--gold-light)">ভর্তির জন্য যেকোনো<br>দিন আসুন</p>
+      </div>
+    </div>
+    <div class="map-placeholder reveal">
+      <div class="map-ico">🗺️</div>
+      <p>বনশ্রী মেইন রোড, বনশ্রী, রামপুরা, ঢাকা-১২১৯</p>
+      <a href="https://maps.google.com/?q=Banasree+Rampura+Dhaka" target="_blank">Google Maps এ দেখুন →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo">
+        <div class="crest">B</div>
+        <div class="txt">
+          <div class="en">Banasree Law College</div>
+          <div class="bn">বনশ্রী ল' কলেজ · ঢাকা</div>
+        </div>
+      </div>
+      <p>জাতীয় বিশ্ববিদ্যালয়ের অনুমোদিত এবং বাংলাদেশ বার কাউন্সিল স্বীকৃত একটি মানসম্পন্ন আইন শিক্ষা প্রতিষ্ঠান। সঠিক শিক্ষা, সুন্দর ভবিষ্যৎ, সাফল্যের নিশ্চয়তা।</p>
+    </div>
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="#about">কলেজ পরিচিতি</a></li>
+        <li><a href="#program">LL.B প্রোগ্রাম</a></li>
+        <li><a href="#teachers">শিক্ষকমণ্ডলী</a></li>
+        <li><a href="#events">ইভেন্ট</a></li>
+        <li><a href="#gallery">গ্যালারি</a></li>
+        <li><a href="#notices">নোটিশ বোর্ড</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>ভর্তি</h5>
+      <ul>
+        <li><a href="#admission">ভর্তি আবেদন</a></li>
+        <li><a href="#program">যোগ্যতা</a></li>
+        <li><a href="#program">ফি কাঠামো</a></li>
+        <li><a href="#contact">যোগাযোগ</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>যোগাযোগ</h5>
+      <ul>
+        <li><a href="tel:01736352747">01736352747</a></li>
+        <li><a href="tel:01910377686">01910377686</a></li>
+        <li><a href="tel:01937661229">01937661229</a></li>
+        <li><a href="#">Facebook Page</a></li>
+        <li><a href="#">WhatsApp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© ২০২৬ Banasree Law College · বনশ্রী, রামপুরা, ঢাকা-১২১৯ · সর্বস্বত্ব সংরক্ষিত</p>
+    <div class="motto">সঠিক শিক্ষা · সুন্দর ভবিষ্যৎ · সাফল্যের নিশ্চয়তা</div>
+  </div>
+</footer>
+
+<!-- FLOATING APPLY BUTTON -->
+<a href="#admission" class="float-apply">✍ এখনই ভর্তি হন</a>
+
+<script>
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  revealEls.forEach(el => observer.observe(el));
+
+  // Hide float button near admission section
+  const admSection = document.getElementById('admission');
+  const floatBtn = document.querySelector('.float-apply');
+  window.addEventListener('scroll', () => {
+    const rect = admSection.getBoundingClientRect();
+    floatBtn.style.opacity = (rect.top < window.innerHeight && rect.bottom > 0) ? '0' : '1';
+  });
+</script>
+</body>
+</html>
