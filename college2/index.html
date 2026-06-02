@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>বনশ্রী ল' কলেজ | Banasree Law College</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a1628;
+    --deep-blue: #1a2f5e;
+    --royal-blue: #1e3a8a;
+    --gold: #c9a227;
+    --gold-light: #f0c040;
+    --red: #c0392b;
+    --white: #ffffff;
+    --off-white: #f8f6f0;
+    --light-gray: #e8e4d9;
+    --text-dark: #1a1a2e;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Hind Siliguri', sans-serif;
+    background: var(--off-white);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  /* ─── TOPBAR ─── */
+  .topbar {
+    background: var(--navy);
+    color: var(--gold-light);
+    text-align: center;
+    padding: 8px 20px;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+  }
+
+  /* ─── NAVBAR ─── */
+  nav {
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.12);
+  }
+
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+  }
+
+  .logo-emblem {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--royal-blue), var(--navy));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    border: 3px solid var(--gold);
+    flex-shrink: 0;
+  }
+
+  .logo-text .bn { font-size: 1.3rem; font-weight: 700; color: var(--deep-blue); line-height: 1.2; }
+  .logo-text .en { font-size: 0.75rem; color: var(--gold); letter-spacing: 1px; font-weight: 500; text-transform: uppercase; }
+
+  .nav-links {
+    display: flex;
+    gap: 6px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--deep-blue);
+    font-size: 0.88rem;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+
+  .nav-links a:hover { background: var(--royal-blue); color: white; }
+
+  .nav-cta {
+    background: var(--red);
+    color: white !important;
+    border-radius: 6px;
+    padding: 9px 18px !important;
+    font-weight: 600 !important;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: #9b1e15 !important; color: white !important; }
+
+  /* ─── HERO ─── */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--deep-blue) 50%, var(--royal-blue) 100%);
+    color: white;
+    padding: 80px 24px 100px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a227' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.4;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 6px 20px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+    animation: fadeDown 0.6s ease;
+  }
+
+  .hero h1 {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    animation: fadeUp 0.7s ease 0.1s both;
+  }
+
+  .hero h1 span { color: var(--gold-light); }
+
+  .hero .sub {
+    font-size: 1.1rem;
+    opacity: 0.85;
+    margin-bottom: 14px;
+    animation: fadeUp 0.7s ease 0.2s both;
+  }
+
+  .hero .session-tag {
+    display: inline-block;
+    background: rgba(201,162,39,0.2);
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+    padding: 8px 24px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 20px 0 30px;
+    animation: fadeUp 0.7s ease 0.3s both;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeUp 0.7s ease 0.4s both;
+  }
+
+  .btn-primary {
+    background: var(--red);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(192,57,43,0.4);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(192,57,43,0.5); }
+
+  .btn-outline {
+    border: 2px solid var(--gold);
+    color: var(--gold-light);
+    padding: 13px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s;
+  }
+  .btn-outline:hover { background: var(--gold); color: var(--navy); }
+
+  /* ─── ADMISSION ALERT ─── */
+  .admission-alert {
+    background: var(--red);
+    color: white;
+    text-align: center;
+    padding: 18px 24px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  .admission-alert span { background: rgba(255,255,255,0.2); padding: 3px 12px; border-radius: 4px; margin: 0 6px; }
+
+  /* ─── STATS ─── */
+  .stats {
+    background: var(--white);
+    padding: 50px 24px;
+  }
+
+  .stats-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
+    text-align: center;
+  }
+
+  .stat-card {
+    padding: 30px 20px;
+    border: 2px solid var(--light-gray);
+    border-radius: 12px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .stat-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+
+  .stat-num { font-size: 2.6rem; font-weight: 800; color: var(--royal-blue); line-height: 1; }
+  .stat-label { font-size: 0.88rem; color: #555; margin-top: 6px; font-weight: 500; }
+
+  /* ─── SECTION COMMON ─── */
+  section { padding: 70px 24px; }
+  .section-tag { color: var(--red); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; }
+  .section-title { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; color: var(--navy); margin-bottom: 14px; line-height: 1.3; }
+  .section-sub { color: #555; font-size: 1rem; line-height: 1.7; max-width: 600px; }
+  .container { max-width: 1200px; margin: 0 auto; }
+
+  /* ─── ABOUT ─── */
+  .about { background: var(--off-white); }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .about-img-box {
+    background: linear-gradient(135deg, var(--navy), var(--royal-blue));
+    border-radius: 16px;
+    padding: 48px 40px;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-img-box::before {
+    content: '⚖';
+    position: absolute;
+    font-size: 120px;
+    opacity: 0.06;
+    top: -20px;
+    right: -10px;
+  }
+
+  .about-img-box h3 { font-size: 3rem; color: var(--gold-light); margin-bottom: 8px; }
+  .about-img-box p { font-size: 1rem; opacity: 0.8; }
+  .about-img-box .year { font-size: 1.2rem; font-weight: 700; color: var(--gold); margin-top: 16px; }
+
+  .about-content .highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 28px;
+  }
+
+  .highlight-item {
+    background: white;
+    border: 1px solid var(--light-gray);
+    border-left: 4px solid var(--gold);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--deep-blue);
+  }
+
+  /* ─── PROGRAM ─── */
+  .program { background: var(--navy); color: white; }
+  .program .section-title { color: white; }
+  .program .section-sub { color: rgba(255,255,255,0.7); }
+
+  .program-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(201,162,39,0.3);
+    border-radius: 16px;
+    padding: 40px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .program-info h3 { font-size: 2.5rem; color: var(--gold-light); font-weight: 800; margin-bottom: 8px; }
+  .program-info p { color: rgba(255,255,255,0.75); line-height: 1.7; font-size: 0.95rem; }
+
+  .program-details { display: flex; flex-direction: column; gap: 16px; }
+
+  .detail-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+  }
+
+  .detail-icon { font-size: 1.4rem; width: 36px; text-align: center; flex-shrink: 0; }
+  .detail-text .label { font-size: 0.78rem; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; }
+  .detail-text .value { font-weight: 600; color: white; font-size: 0.95rem; }
+
+  /* ─── FEATURES ─── */
+  .features { background: white; }
+
+  .features-header { text-align: center; margin-bottom: 48px; }
+  .features-header .section-sub { margin: 0 auto; }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+
+  .feature-card {
+    border: 2px solid var(--light-gray);
+    border-radius: 14px;
+    padding: 32px 28px;
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--royal-blue), var(--gold));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+  .feature-card:hover { border-color: var(--royal-blue); transform: translateY(-4px); box-shadow: 0 10px 30px rgba(30,58,138,0.1); }
+  .feature-card:hover::before { transform: scaleX(1); }
+
+  .feature-icon { font-size: 2.4rem; margin-bottom: 16px; display: block; }
+  .feature-card h4 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .feature-card p { font-size: 0.88rem; color: #666; line-height: 1.65; }
+
+  /* ─── CONTACT ─── */
+  .contact { background: var(--off-white); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+
+  .contact-info h3 { font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: 24px; }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 22px;
+    padding: 18px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid var(--light-gray);
+  }
+
+  .contact-icon { font-size: 1.4rem; color: var(--royal-blue); flex-shrink: 0; margin-top: 2px; }
+  .contact-item .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); font-weight: 700; }
+  .contact-item .value { font-size: 0.95rem; color: var(--navy); font-weight: 500; line-height: 1.6; }
+
+  /* ─── FORM ─── */
+  .form-card {
+    background: white;
+    border-radius: 16px;
+    padding: 36px 32px;
+    border: 1px solid var(--light-gray);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  }
+
+  .form-card h3 { font-size: 1.3rem; font-weight: 700; color: var(--navy); margin-bottom: 24px; padding-bottom: 14px; border-bottom: 2px solid var(--light-gray); }
+
+  .form-group { margin-bottom: 18px; }
+  .form-group label { display: block; font-size: 0.83rem; font-weight: 600; color: var(--deep-blue); margin-bottom: 6px; }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid var(--light-gray);
+    border-radius: 8px;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 0.93rem;
+    color: var(--text-dark);
+    background: var(--off-white);
+    transition: border-color 0.2s;
+    outline: none;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--royal-blue); background: white; }
+  .form-group textarea { resize: vertical; min-height: 90px; }
+
+  .submit-btn {
+    width: 100%;
+    background: var(--red);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .submit-btn:hover { background: #9b1e15; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.75);
+    padding: 50px 24px 24px;
+  }
+
+  .footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .footer-brand .name { font-size: 1.4rem; color: white; font-weight: 700; margin-bottom: 4px; }
+  .footer-brand .en { color: var(--gold); font-size: 0.8rem; letter-spacing: 1px; margin-bottom: 14px; }
+  .footer-brand p { font-size: 0.88rem; line-height: 1.7; max-width: 280px; }
+
+  .footer-col h5 { color: var(--gold-light); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 10px; }
+  .footer-col ul li a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
+  .footer-col ul li a:hover { color: var(--gold-light); }
+
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 20px auto 0;
+    text-align: center;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 768px) {
+    .about-grid, .program-card, .contact-grid, .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    .about-content .highlights { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .hero { padding: 60px 20px 80px; }
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    footer .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  }
+
+  /* ─── HAMBURGER (mobile) ─── */
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
+  .hamburger span { width: 24px; height: 2px; background: var(--navy); border-radius: 2px; display: block; }
+
+  @media (max-width: 768px) {
+    .hamburger { display: flex; }
+  }
+
+  /* ─── NOTICE STRIP ─── */
+  .notice {
+    background: linear-gradient(90deg, var(--royal-blue), var(--deep-blue));
+    color: white;
+    overflow: hidden;
+    padding: 12px 0;
+  }
+  .notice-inner {
+    display: flex;
+    gap: 80px;
+    white-space: nowrap;
+    animation: marquee 25s linear infinite;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  @keyframes marquee { from { transform: translateX(100%); } to { transform: translateX(-100%); } }
+</style>
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+  📞 ভর্তির জন্য যোগাযোগ করুন: 01736352747 | 01910 377686 | 01937661229
+</div>
+
+<!-- Navbar -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="logo-emblem">⚖️</div>
+      <div class="logo-text">
+        <div class="bn">বনশ্রী ল' কলেজ</div>
+        <div class="en">Banasree Law College</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">আমাদের সম্পর্কে</a></li>
+      <li><a href="#program">প্রোগ্রাম</a></li>
+      <li><a href="#features">বৈশিষ্ট্য</a></li>
+      <li><a href="#contact">যোগাযোগ</a></li>
+      <li><a href="#apply" class="nav-cta">ভর্তি হন</a></li>
+    </ul>
+    <button class="hamburger" onclick="alert('মেনু শীঘ্রই আসছে')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Notice Ticker -->
+<div class="notice">
+  <div class="notice-inner">
+    🔴 এল.এল.বি. ১ম বর্ষে ভর্তি চলছে — সেশন ২০২৬–২০২৭ &nbsp;|&nbsp; 📚 জাতীয় বিশ্ববিদ্যালয়ের অধীনে ২ বছর মেয়াদী প্রোগ্রাম &nbsp;|&nbsp; 🏛 দিবা ও নৈশ শাখায় ভর্তির সুযোগ &nbsp;|&nbsp; ✅ ১০০% ক্লাসের নিশ্চয়তা
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-badge">🎓 ২০২৬–২০২৭ ভর্তি চলছে</div>
+  <h1>বনশ্রী <span>ল' কলেজ</span><br>Banasree Law College</h1>
+  <p class="sub">কম খরচে মানসম্পন্ন আইন শিক্ষা — জাতীয় বিশ্ববিদ্যালয়ের অধীনে</p>
+  <div class="session-tag">📅 সেশন: ২০২৬–২০২৭ | এখনই সুযোগ নিন</div>
+  <div class="hero-buttons">
+    <a href="#apply" class="btn-primary">🎓 এখনই ভর্তি হন</a>
+    <a href="#program" class="btn-outline">📋 প্রোগ্রাম জানুন</a>
+  </div>
+</section>
+
+<!-- Admission Alert -->
+<div class="admission-alert">
+  🔴 এল.এল.বি. ১ম বর্ষে ভর্তি চলছে — <span>সীমিত আসন</span> — আজই আবেদন করুন!
+</div>
+
+<!-- Stats -->
+<div class="stats">
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-num">২</div>
+      <div class="stat-label">বছর মেয়াদী এল.এল.বি প্রোগ্রাম</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">১০০%</div>
+      <div class="stat-label">ক্লাসের নিশ্চয়তা</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">২</div>
+      <div class="stat-label">শাখা — দিবা ও নৈশ</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">AC</div>
+      <div class="stat-label">শীতাতপ নিয়ন্ত্রিত ক্লাসরুম</div>
+    </div>
+  </div>
+</div>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-box">
+        <h3>⚖️</h3>
+        <p style="font-size:1.5rem;font-weight:800;color:var(--gold-light)">বনশ্রী ল' কলেজ</p>
+        <p>Banasree Law College</p>
+        <p class="year">🏛 ঢাকা, বাংলাদেশ</p>
+        <br>
+        <p style="font-size:0.88rem;opacity:0.7">জাতীয় বিশ্ববিদ্যালয় অনুমোদিত</p>
+      </div>
+      <div class="about-content">
+        <div class="section-tag">আমাদের সম্পর্কে</div>
+        <h2 class="section-title">কেন বনশ্রী ল' কলেজ?</h2>
+        <p class="section-sub">বনশ্রী ল' কলেজ একটি জাতীয় বিশ্ববিদ্যালয় অনুমোদিত আইন শিক্ষা প্রতিষ্ঠান। আমরা বিশ্বাস করি, মানসম্পন্ন আইন শিক্ষা সবার নাগালে থাকা উচিত — কম খরচে, পেশাদার পরিবেশে।</p>
+        <div class="highlights">
+          <div class="highlight-item">✅ অভিজ্ঞ শিক্ষকমণ্ডলী দ্বারা পাঠদান</div>
+          <div class="highlight-item">✅ ১০০% ক্লাসের নিশ্চয়তা</div>
+          <div class="highlight-item">✅ AC শ্রেণিকক্ষ</div>
+          <div class="highlight-item">✅ দিবা ও নৈশ শাখা</div>
+          <div class="highlight-item">✅ সমৃদ্ধ লাইব্রেরি ও রিডিং রুম</div>
+          <div class="highlight-item">✅ শৃঙ্খলাবদ্ধ নিরাপদ পরিবেশ</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Program -->
+<section class="program" id="program">
+  <div class="container">
+    <div class="section-tag" style="color:var(--gold)">আমাদের প্রোগ্রাম</div>
+    <h2 class="section-title">এল.এল.বি (LL.B) ডিগ্রী</h2>
+    <p class="section-sub">জাতীয় বিশ্ববিদ্যালয়ের অধীনে স্বল্প মেয়াদে আইন ডিগ্রী অর্জনের সুযোগ</p>
+
+    <div class="program-card">
+      <div class="program-info">
+        <h3>LL.B</h3>
+        <p style="font-size:1.1rem;color:var(--gold-light);font-weight:700;margin-bottom:14px">ব্যাচেলর অব ল'জ</p>
+        <p>জাতীয় বিশ্ববিদ্যালয়ের অধীনে পরিচালিত ২ বছর মেয়াদী এই প্রোগ্রামটি আইন পেশায় প্রবেশের জন্য একটি আদর্শ সুযোগ। দক্ষ শিক্ষকমণ্ডলী ও পেশাদার পরিবেশে আইনের প্রতিটি দিক শেখানো হয়।</p>
+        <br>
+        <a href="#apply" class="btn-primary" style="display:inline-block">📝 ভর্তির জন্য আবেদন করুন</a>
+      </div>
+      <div class="program-details">
+        <div class="detail-row">
+          <div class="detail-icon">📅</div>
+          <div class="detail-text">
+            <div class="label">সেশন</div>
+            <div class="value">২০২৬–২০২৭</div>
+          </div>
+        </div>
+        <div class="detail-row">
+          <div class="detail-icon">⏱</div>
+          <div class="detail-text">
+            <div class="label">মেয়াদ</div>
+            <div class="value">২ বছর (জাতীয় বিশ্ববিদ্যালয়)</div>
+          </div>
+        </div>
+        <div class="detail-row">
+          <div class="detail-icon">🌅</div>
+          <div class="detail-text">
+            <div class="label">শাখাসমূহ</div>
+            <div class="value">দিবা শাখা ও নৈশ শাখা</div>
+          </div>
+        </div>
+        <div class="detail-row">
+          <div class="detail-icon">💰</div>
+          <div class="detail-text">
+            <div class="label">খরচ</div>
+            <div class="value">সাশ্রয়ী ও কম খরচে</div>
+          </div>
+        </div>
+        <div class="detail-row">
+          <div class="detail-icon">🏛</div>
+          <div class="detail-text">
+            <div class="label">অনুমোদন</div>
+            <div class="value">জাতীয় বিশ্ববিদ্যালয়</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="features-header">
+      <div class="section-tag">আমাদের বৈশিষ্ট্য</div>
+      <h2 class="section-title">কেন আমরা আলাদা</h2>
+      <p class="section-sub">আমাদের প্রতিষ্ঠান শিক্ষার্থীদের সর্বোচ্চ সুযোগ-সুবিধা প্রদানে প্রতিশ্রুতিবদ্ধ</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="feature-icon">👨‍🏫</span>
+        <h4>অভিজ্ঞ শিক্ষকমণ্ডলী</h4>
+        <p>অভিজ্ঞ ও দক্ষ শিক্ষকমণ্ডলী দ্বারা ক্লাস পরিচালনা করা হয়, যারা আইন পেশায় প্রতিষ্ঠিত।</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">✅</span>
+        <h4>১০০% ক্লাসের নিশ্চয়তা</h4>
+        <p>প্রতিটি ক্লাস নিয়মিত ও সময়মতো পরিচালিত হওয়ার নিশ্চয়তা আমাদের প্রতিশ্রুতি।</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">❄️</span>
+        <h4>AC ক্লাস রুম</h4>
+        <p>সম্পূর্ণ শীতাতপ নিয়ন্ত্রিত আধুনিক ক্লাসরুমে পাঠগ্রহণের সুবিধা।</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🌙</span>
+        <h4>দিবা ও নৈশ শাখা</h4>
+        <p>কর্মজীবী শিক্ষার্থীদের কথা ভেবে দিবা ও নৈশ উভয় শাখায় ভর্তির সুযোগ।</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">📚</span>
+        <h4>সমৃদ্ধ লাইব্রেরি</h4>
+        <p>বিস্তৃত আইন বিষয়ক বই, জার্নাল ও রেফারেন্স মেটেরিয়ালসমৃদ্ধ লাইব্রেরি।</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🔒</span>
+        <h4>নিরাপদ পরিবেশ</h4>
+        <p>শৃঙ্খলাবদ্ধ ও নিরাপদ শিক্ষার পরিবেশ নিশ্চিত করা হয় সর্বদা।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact & Apply -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-tag">যোগাযোগ</div>
+    <h2 class="section-title">আমাদের সাথে যোগাযোগ করুন</h2>
+    <br>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>📍 ঠিকানা ও যোগাযোগ</h3>
+
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="label">প্রধান অফিস</div>
+            <div class="value">হাউস # ১০, ব্লক # এফ, বনশ্রী মেইন রোড,<br>বনশ্রী, রামপুরা, ঢাকা-১২১৯</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">🏢</div>
+          <div>
+            <div class="label">মতিঝিল এডমিশন অফিস</div>
+            <div class="value">নাজমুল এন্ড এসোসিয়েট, ৫৬–৫৭, মতিঝিল বাণিজ্যিক এলাকা<br>(চতুর্থ তলা), শরীফ ম্যানশন, মতিঝিল, ঢাকা</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="label">ফোন নম্বর</div>
+            <div class="value">01736352747<br>01910 377686<br>01937661229<br>01700991729</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card" id="apply">
+        <h3>📝 ভর্তির জন্য আবেদন করুন</h3>
+        <div class="form-group">
+          <label>পূর্ণ নাম</label>
+          <input type="text" placeholder="আপনার নাম লিখুন">
+        </div>
+        <div class="form-group">
+          <label>মোবাইল নম্বর</label>
+          <input type="tel" placeholder="01XXXXXXXXX">
+        </div>
+        <div class="form-group">
+          <label>ইমেইল (ঐচ্ছিক)</label>
+          <input type="email" placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label>শাখা নির্বাচন</label>
+          <select>
+            <option value="">শাখা বেছে নিন</option>
+            <option>দিবা শাখা</option>
+            <option>নৈশ শাখা</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>বার্তা (ঐচ্ছিক)</label>
+          <textarea placeholder="আপনার কোনো প্রশ্ন থাকলে লিখুন..."></textarea>
+        </div>
+        <button class="submit-btn" onclick="alert('আপনার আবেদন পাঠানো হয়েছে! আমরা শীঘ্রই যোগাযোগ করব।')">📤 আবেদন পাঠান</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="name">বনশ্রী ল' কলেজ</div>
+      <div class="en">BANASREE LAW COLLEGE</div>
+      <p>কম খরচে মানসম্পন্ন আইন শিক্ষার প্রতিশ্রুতি নিয়ে আমরা কাজ করে যাচ্ছি। জাতীয় বিশ্ববিদ্যালয় অনুমোদিত এই প্রতিষ্ঠানে আপনার ভবিষ্যৎ গড়ে তুলুন।</p>
+      <br>
+      <p>✉ যোগাযোগ: 01736352747</p>
+    </div>
+    <div class="footer-col">
+      <h5>দ্রুত লিঙ্ক</h5>
+      <ul>
+        <li><a href="#about">আমাদের সম্পর্কে</a></li>
+        <li><a href="#program">প্রোগ্রাম</a></li>
+        <li><a href="#features">বৈশিষ্ট্য</a></li>
+        <li><a href="#contact">যোগাযোগ</a></li>
+        <li><a href="#apply">ভর্তি হন</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>যোগাযোগ</h5>
+      <ul>
+        <li><a href="#">📞 01736352747</a></li>
+        <li><a href="#">📞 01910 377686</a></li>
+        <li><a href="#">📞 01937661229</a></li>
+        <li><a href="#">📞 01700991729</a></li>
+        <li><a href="#">📍 বনশ্রী, ঢাকা-১২১৯</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© ২০২৬ বনশ্রী ল' কলেজ। সর্বস্বত্ব সংরক্ষিত। &nbsp;|&nbsp; সঠিক শিক্ষা, সুন্দর ভবিষ্যৎ, সাফল্যের নিশ্চয়তা</p>
+  </div>
+</footer>
+
+</body>
+</html>
